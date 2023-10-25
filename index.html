@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap" rel="stylesheet">
+    <title>Murottal</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+
+        }
+
+        .judul-page {
+            height: 30vh;
+            width: 100vw;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .judul {
+            font-size: 3em;
+            font-family: Poppins;
+            font-weight: 900;
+            color: #2EDBC8;
+        }
+
+        .deskripsi {
+            width: 40vw;
+            text-align: center;
+            color: #2EDBC8;
+
+        }
+        .made{
+            font-family: Poppins;
+            font-size: 1em;
+            margin-top: 10px;
+            color: #2EDBC8;
+            font-weight: bold;
+        }
+
+        .kartu-page {
+            width: 100vw;
+            justify-content: center;
+            display: flex;
+        }
+
+        .kartu-column {
+            border-radius: 30px;
+            overflow-x: scroll;
+            padding-left: 20px;
+            margin-right: 40px;
+            margin-left: 40px;
+            white-space: nowrap;
+            align-items: center;
+            box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.157);
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            font-family: Poppins;
+            background: #2EDBC8;
+            border-radius: 20px;
+            margin: 5px;
+            text-align:justify;
+            display: inline-block;
+            padding-left: 10px;
+            padding: 20px;
+            margin-right: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.46)
+        }
+        .gambar{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        .nama{
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        .arti{
+            padding-left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            color: #2EDBC8;
+            font-weight: bold;
+        }
+        .ayat{
+            padding-top: 10px;
+            padding-left: 10px;
+            background: white;
+            font-weight: bold;
+            color: #2EDBC8;
+            border-radius: 10px 10px 0px 0px ;
+            margin-top: 20px;
+        }
+        .berapa{
+            background: white;
+            color: #2EDBC8;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        .tempat{
+            background: white;
+            font-weight: bold;
+            padding-left: 10px;
+            color: #2EDBC8;
+        }
+        .tipe{
+            background: white;
+            font-weight: bold;
+            padding-left: 10px;
+            color: #2EDBC8;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-radius: 0px 0px 10px 10px;
+
+        }
+
+        .audio-play {
+            width: 18vw;
+        }
+
+        @media screen and (max-width: 767px) {
+            .deskripsi{
+                width: 80vw;
+            }
+            .gambar{
+                margin-left: 40px;
+            }
+            .audio-play{
+                width: 55vw;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="judul-page">
+            <div class="judul">
+                <p> I MUROTTAL</p>
+            </div>
+            <div class="deskripsi">
+                <p>Menampilkan Murottal Alquran oleh syeikh mishaari raashid, tersedia semua nama surah, beberapa
+                    penjelasan, serta audio quran</p>
+            </div>
+            <div class="made">
+                <P>By Ihsan Ahmad</P>
+            </div>
+        </div>
+        <div class="kartu-page">
+            <div class="kartu-column" id="cards" >
+                <!-- <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div>
+                <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div>
+                <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div>
+                <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div>
+                <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div>
+                <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div>
+                <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div>
+                <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div>
+                <div class="card" >
+                    <h3>Halo no 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae sit nihil dolorum voluptatibus rem eligendi ullam, mollitia minima cum.</p>
+                </div> -->
+
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        // Daftar gambar makanan dan nama makanan (sesuaikan dengan keinginan Anda)
+
+        const url = 'https://raw.githubusercontent.com/penggguna/QuranJSON/master/quran.json'
+        const cardsContainer = document.getElementById('cards');
+
+        fetch(url).then(response => response.json()).then(data => {
+            data.forEach(el => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const image = document.createElement('img');
+                image.src = 'qurankufi.png';
+                image.className = 'gambar'
+                card.appendChild(image)
+
+                // Tambahkan nama makanan ke dalam card
+                const nameElement = document.createElement('p');
+                nameElement.textContent = el.name;
+                nameElement.className = 'nama';
+                card.appendChild(nameElement);
+
+                const arti = document.createElement('p');
+                arti.textContent = el.name_translations.id;
+                arti.className = 'arti';
+                card.appendChild(arti)
+
+                const ayat = document.createElement('p');
+                ayat.textContent = ('Jumlah ayat : ' + el.number_of_ayah);
+                ayat.className = 'ayat';
+                card.appendChild(ayat)
+
+                const berapa = document.createElement('p');
+                berapa.textContent = ('surah ke : ' + el.number_of_surah);
+                berapa.className = 'berapa';
+                card.appendChild(berapa)
+
+                const tempat = document.createElement('p');
+                tempat.className = 'tempat';
+                tempat.textContent = ('Tempat : '+ el.place);
+                card.appendChild(tempat)
+
+                const tipe = document.createElement('p');
+                tipe.textContent = ('tipe : ' + el.type);
+                tipe.className = 'tipe';
+                card.appendChild(tipe)
+
+                const audio = document.createElement('audio');
+                audio.setAttribute('controls', '')
+                audio.setAttribute('src', el.recitation)
+                audio.className ='audio-play'
+                card.appendChild(audio)
+
+                
+
+
+                cardsContainer.appendChild(card);
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>
