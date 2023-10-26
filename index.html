@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap" rel="stylesheet">
     <title>Murottal</title>
     <style>
         * {
@@ -41,7 +42,8 @@
             width: 40vw;
             text-align: center;
             color: #2EDBC8;
-
+            font-family: Poppins;
+            font-weight: bold;
         }
         .made{
             font-family: Poppins;
@@ -80,8 +82,15 @@
             padding-left: 10px;
             padding: 20px;
             margin-right: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.46)
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.46);
+            transition: 0.3s
         }
+        
+        .card:hover{
+            background: #1dc1ad;
+            
+        }
+
         .gambar{
             margin-top: 20px;
             margin-left: 50px;
@@ -103,7 +112,7 @@
             padding-top: 10px;
             padding-left: 10px;
             background: white;
-            font-weight: bold;
+            font-weight:600;
             color: #2EDBC8;
             border-radius: 10px 10px 0px 0px ;
             margin-top: 20px;
@@ -111,18 +120,18 @@
         .berapa{
             background: white;
             color: #2EDBC8;
-            font-weight: bold;
+            font-weight: 600;
             padding-left: 10px;
         }
         .tempat{
             background: white;
-            font-weight: bold;
+            font-weight: 600;
             padding-left: 10px;
             color: #2EDBC8;
         }
         .tipe{
             background: white;
-            font-weight: bold;
+            font-weight: 600;
             padding-left: 10px;
             color: #2EDBC8;
             padding-bottom: 10px;
@@ -135,9 +144,12 @@
             width: 18vw;
         }
 
+
+
         @media screen and (max-width: 767px) {
             .deskripsi{
                 width: 80vw;
+                font-size: 0.8em;
             }
             .gambar{
                 margin-left: 40px;
@@ -161,9 +173,7 @@
                 <p>Menampilkan Murottal Alquran oleh syeikh mishaari raashid, tersedia semua nama surah, beberapa
                     penjelasan, serta audio quran</p>
             </div>
-            <div class="made">
-                <P>By Ihsan Ahmad</P>
-            </div>
+            
         </div>
         <div class="kartu-page">
             <div class="kartu-column" id="cards" >
@@ -217,6 +227,7 @@
 
         fetch(url).then(response => response.json()).then(data => {
             data.forEach(el => {
+
                 const card = document.createElement('div');
                 card.className = 'card';
 
@@ -242,7 +253,7 @@
                 card.appendChild(ayat)
 
                 const berapa = document.createElement('p');
-                berapa.textContent = ('surah ke : ' + el.number_of_surah);
+                berapa.textContent = ('Surah ke : ' + el.number_of_surah);
                 berapa.className = 'berapa';
                 card.appendChild(berapa)
 
@@ -252,18 +263,15 @@
                 card.appendChild(tempat)
 
                 const tipe = document.createElement('p');
-                tipe.textContent = ('tipe : ' + el.type);
+                tipe.textContent = ('Tipe : ' + el.type);
                 tipe.className = 'tipe';
                 card.appendChild(tipe)
 
                 const audio = document.createElement('audio');
                 audio.setAttribute('controls', '')
                 audio.setAttribute('src', el.recitation)
-                audio.className ='audio-play'
+                audio.className ='audio-play';
                 card.appendChild(audio)
-
-                
-
 
                 cardsContainer.appendChild(card);
             })
